@@ -14,12 +14,12 @@ public class ModeloTablaMVC implements TableModel {
 
     @Override
     public int getRowCount() {
-        return COLS;
+        return datos.size();
     }
 
     @Override
     public int getColumnCount() {
-        return datos.size();
+        return COLS;
     }
 
     @Override
