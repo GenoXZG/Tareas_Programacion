@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ModeloPostreTabla implements TableModel {
-    public static final int COLUMNS = 3;
+    public static final int COLUMNS = 6;
     private ArrayList<Postre> datos;
     private PostreDAO pdao;
 
@@ -36,6 +36,12 @@ public class ModeloPostreTabla implements TableModel {
                 return "Nombre";
             case 2:
                 return "Gastronomia";
+            case 3:
+                return "Descripcion";
+            case 4:
+                return "Categoria";
+            case 5:
+                return "Url Image";
         }
         return null;
     }
@@ -49,13 +55,19 @@ public class ModeloPostreTabla implements TableModel {
                 return String.class;
             case 2:
                 return String.class;
+            case 3:
+                return String.class;
+            case 4:
+                return String.class;
+            case 5:
+                return String.class;
         }
         return null;
     }
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        return true;
+        return false;
     }
 
     @Override
@@ -68,6 +80,12 @@ public class ModeloPostreTabla implements TableModel {
                 return tmp.getNombre();
             case 2:
                 return tmp.getGastronomia();
+            case 3:
+                return tmp.getDescripcion();
+            case 4:
+                return tmp.getCategoria();
+            case 5:
+                return tmp.getUrlImage();
         }
         return null;
     }
@@ -83,6 +101,15 @@ public class ModeloPostreTabla implements TableModel {
                 break;
             case 2:
                 datos.get(rowIndex).setGastronomia( (String) aValue );
+                break;
+            case 3:
+                datos.get(rowIndex).setDescripcion((String) aValue);
+                break;
+            case 4:
+                datos.get(rowIndex).setCategoria((String) aValue);
+                break;
+            case 5:
+                datos.get(rowIndex).setUrlImage((String) aValue);
                 break;
             default:
                 System.out.println("No se modifico nada");
@@ -107,7 +134,7 @@ public class ModeloPostreTabla implements TableModel {
             sqle.printStackTrace();
         }
     }
-    public boolean agregarLibro(Postre postre){
+    public boolean agregarPostre(Postre postre){
         boolean resultado = false;
         try {
             if (pdao.insertar(postre)){

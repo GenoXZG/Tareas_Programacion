@@ -8,11 +8,19 @@ public class Ventana extends JFrame {
     private JLabel lblId;
     private JLabel lblNombre;
     private JLabel lblGastronomia;
+
+    private JLabel lblDescripcion;
+    private JLabel lblCategoria;
+    private JLabel lblUrlImage;
     private JLabel lblImagenPanel3;
 
     private JTextField txtId;
     private JTextField txtNombre;
     private JTextField txtGastronomia;
+    private JTextField txtDescripcion;
+    private JTextField txtCategoria;
+    private JTextField txtUrlImage;
+
     private JTable tblPostres;
     private JScrollPane scrollPane;
     private JButton btnAgregar;
@@ -32,6 +40,12 @@ public class Ventana extends JFrame {
     private JTextField txtNombreActualizar;
     private JLabel lblGastronomiaActualizar;
     private JTextField txtGastronomiaActualizar;
+    private JLabel lblDescripcionActualizar;
+    private JTextField txtDescripcionActualizar;
+    private JLabel lblTipoActualizar;
+    private JTextField txtTipoActualizar;
+    private JLabel lblUrlImageActualizar;
+    private JTextField txtUrlImageActualizar;
     private JButton btnActualizar;
 
     //Seccion Delete panel 4
@@ -41,6 +55,12 @@ public class Ventana extends JFrame {
     private JTextField txtNombreEliminar;
     private JLabel lblGastronomiaEliminar;
     private JTextField txtGastronomiaEliminar;
+    private JLabel LblDescripcionEliminar;
+    private JTextField txtDescripcionEliminar;
+    private JLabel lblTipoEliminar;
+    private JTextField txtTipoEliminar;
+    private JLabel lblUrlImageEliminar;
+    private JTextField txtUrlImageEliminar;
     private JButton btnEliminar;
     private GridLayout layout;
 
@@ -66,6 +86,30 @@ public class Ventana extends JFrame {
 
     public void setLblGastronomia(JLabel lblGastronomia) {
         this.lblGastronomia = lblGastronomia;
+    }
+
+    public JLabel getLblDescripcion() {
+        return lblDescripcion;
+    }
+
+    public void setLblDescripcion(JLabel lblDescripcion) {
+        this.lblDescripcion = lblDescripcion;
+    }
+
+    public JLabel getLblCategoria() {
+        return lblCategoria;
+    }
+
+    public void setLblCategoria(JLabel lblCategoria) {
+        this.lblCategoria = lblCategoria;
+    }
+
+    public JLabel getLblUrlImage() {
+        return lblUrlImage;
+    }
+
+    public void setLblUrlImage(JLabel lblUrlImage) {
+        this.lblUrlImage = lblUrlImage;
     }
 
     public JLabel getLblImagenPanel3() {
@@ -98,6 +142,30 @@ public class Ventana extends JFrame {
 
     public void setTxtGastronomia(JTextField txtGastronomia) {
         this.txtGastronomia = txtGastronomia;
+    }
+
+    public JTextField getTxtDescripcion() {
+        return txtDescripcion;
+    }
+
+    public void setTxtDescripcion(JTextField txtDescripcion) {
+        this.txtDescripcion = txtDescripcion;
+    }
+
+    public JTextField getTxtCategoria() {
+        return txtCategoria;
+    }
+
+    public void setTxtCategoria(JTextField txtCategoria) {
+        this.txtCategoria = txtCategoria;
+    }
+
+    public JTextField getTxtUrlImage() {
+        return txtUrlImage;
+    }
+
+    public void setTxtUrlImage(JTextField txtUrlImage) {
+        this.txtUrlImage = txtUrlImage;
     }
 
     public JTable getTblPostres() {
@@ -228,6 +296,54 @@ public class Ventana extends JFrame {
         this.txtGastronomiaActualizar = txtGastronomiaActualizar;
     }
 
+    public JLabel getLblDescripcionActualizar() {
+        return lblDescripcionActualizar;
+    }
+
+    public void setLblDescripcionActualizar(JLabel lblDescripcionActualizar) {
+        this.lblDescripcionActualizar = lblDescripcionActualizar;
+    }
+
+    public JTextField getTxtDescripcionActualizar() {
+        return txtDescripcionActualizar;
+    }
+
+    public void setTxtDescripcionActualizar(JTextField txtDescripcionActualizar) {
+        this.txtDescripcionActualizar = txtDescripcionActualizar;
+    }
+
+    public JLabel getLblTipoActualizar() {
+        return lblTipoActualizar;
+    }
+
+    public void setLblTipoActualizar(JLabel lblTipoActualizar) {
+        this.lblTipoActualizar = lblTipoActualizar;
+    }
+
+    public JTextField getTxtTipoActualizar() {
+        return txtTipoActualizar;
+    }
+
+    public void setTxtTipoActualizar(JTextField txtTipoActualizar) {
+        this.txtTipoActualizar = txtTipoActualizar;
+    }
+
+    public JLabel getLblUrlImageActualizar() {
+        return lblUrlImageActualizar;
+    }
+
+    public void setLblUrlImageActualizar(JLabel lblUrlImageActualizar) {
+        this.lblUrlImageActualizar = lblUrlImageActualizar;
+    }
+
+    public JTextField getTxtUrlImageActualizar() {
+        return txtUrlImageActualizar;
+    }
+
+    public void setTxtUrlImageActualizar(JTextField txtUrlImageActualizar) {
+        this.txtUrlImageActualizar = txtUrlImageActualizar;
+    }
+
     public JButton getBtnActualizar() {
         return btnActualizar;
     }
@@ -284,6 +400,54 @@ public class Ventana extends JFrame {
         this.txtGastronomiaEliminar = txtGastronomiaEliminar;
     }
 
+    public JLabel getLblDescripcionEliminar() {
+        return LblDescripcionEliminar;
+    }
+
+    public void setLblDescripcionEliminar(JLabel lblDescripcionEliminar) {
+        LblDescripcionEliminar = lblDescripcionEliminar;
+    }
+
+    public JTextField getTxtDescripcionEliminar() {
+        return txtDescripcionEliminar;
+    }
+
+    public void setTxtDescripcionEliminar(JTextField txtDescripcionEliminar) {
+        this.txtDescripcionEliminar = txtDescripcionEliminar;
+    }
+
+    public JLabel getLblTipoEliminar() {
+        return lblTipoEliminar;
+    }
+
+    public void setLblTipoEliminar(JLabel lblTipoEliminar) {
+        this.lblTipoEliminar = lblTipoEliminar;
+    }
+
+    public JTextField getTxtTipoEliminar() {
+        return txtTipoEliminar;
+    }
+
+    public void setTxtTipoEliminar(JTextField txtTipoEliminar) {
+        this.txtTipoEliminar = txtTipoEliminar;
+    }
+
+    public JLabel getLblUrlImageEliminar() {
+        return lblUrlImageEliminar;
+    }
+
+    public void setLblUrlImageEliminar(JLabel lblUrlImageEliminar) {
+        this.lblUrlImageEliminar = lblUrlImageEliminar;
+    }
+
+    public JTextField getTxtUrlImageEliminar() {
+        return txtUrlImageEliminar;
+    }
+
+    public void setTxtUrlImageEliminar(JTextField txtUrlImageEliminar) {
+        this.txtUrlImageEliminar = txtUrlImageEliminar;
+    }
+
     public JButton getBtnEliminar() {
         return btnEliminar;
     }
@@ -324,6 +488,13 @@ public class Ventana extends JFrame {
         txtNombre = new JTextField(15);
         lblGastronomia = new JLabel("Gastronomia:");
         txtGastronomia = new JTextField(15);
+        lblDescripcion = new JLabel("Descripcion:");
+        txtDescripcion = new JTextField(15);
+        lblCategoria = new JLabel("Categoria:");
+        txtCategoria = new JTextField(15);
+        lblUrlImage = new JLabel("URL:");
+        txtUrlImage = new JTextField(15);
+
         btnAgregar = new JButton("Agregar:");
         panel1.add(lblId);
         panel1.add(txtId);
@@ -331,6 +502,12 @@ public class Ventana extends JFrame {
         panel1.add(txtNombre);
         panel1.add(lblGastronomia);
         panel1.add(txtGastronomia);
+        panel1.add(lblDescripcion);
+        panel1.add(txtDescripcion);
+        panel1.add(lblCategoria);
+        panel1.add(txtCategoria);
+        panel1.add(lblUrlImage);
+        panel1.add(txtUrlImage);
         panel1.add(btnAgregar);
         panel1.updateUI();
 
@@ -369,6 +546,12 @@ public class Ventana extends JFrame {
         txtNombreActualizar = new JTextField(15);
         lblGastronomiaActualizar = new JLabel("Gastronomia: ");
         txtGastronomiaActualizar = new JTextField(15);
+        lblDescripcionActualizar = new JLabel("Descripcion: ");
+        txtDescripcionActualizar = new JTextField(15);
+        lblTipoActualizar = new JLabel("Categoria: ");
+        txtTipoActualizar = new JTextField(15);
+        lblUrlImageActualizar = new JLabel("URL: ");
+        txtUrlImageActualizar = new JTextField(15);
         btnActualizar = new JButton("Actualizar registro");
         panel3Update.add(lblidActualizar);
         panel3Update.add(txtidActualizar);
@@ -376,6 +559,12 @@ public class Ventana extends JFrame {
         panel3Update.add(txtNombreActualizar);
         panel3Update.add(lblGastronomiaActualizar);
         panel3Update.add(txtGastronomiaActualizar);
+        panel3Update.add(lblDescripcionActualizar);
+        panel3Update.add(txtDescripcionActualizar);
+        panel3Update.add(lblTipoActualizar);
+        panel3Update.add(txtTipoActualizar);
+        panel3Update.add(lblUrlImageActualizar);
+        panel3Update.add(txtUrlImageActualizar);
         panel3Update.add(btnActualizar);
         //Seccion Delete
         panel3Delete = new JPanel(new FlowLayout());
@@ -387,6 +576,13 @@ public class Ventana extends JFrame {
         txtNombreEliminar = new JTextField(14);
         lblGastronomiaEliminar = new JLabel("Gastronomia: ");
         txtGastronomiaEliminar = new JTextField(15);
+        LblDescripcionEliminar = new JLabel("Descripcion: ");
+        txtDescripcionEliminar = new JTextField(15);
+        lblTipoEliminar = new JLabel("Categoria: ");
+        txtTipoEliminar = new JTextField(15);
+        lblUrlImageEliminar = new JLabel("URL: ");
+        txtUrlImageEliminar = new JTextField(15);
+
         btnEliminar = new JButton("Eliminar registro");
         panel3Delete.add(lblidEliminar);
         panel3Delete.add(txtidEliminar);
@@ -394,6 +590,12 @@ public class Ventana extends JFrame {
         panel3Delete.add(txtNombreEliminar);
         panel3Delete.add(lblGastronomiaEliminar);
         panel3Delete.add(txtGastronomiaEliminar);
+        panel3Delete.add(LblDescripcionEliminar);
+        panel3Delete.add(txtDescripcionEliminar);
+        panel3Delete.add(lblTipoEliminar);
+        panel3Delete.add(txtTipoEliminar);
+        panel3Delete.add(lblUrlImageEliminar);
+        panel3Delete.add(txtUrlImageEliminar);
         panel3Delete.add(btnEliminar);
 
 
@@ -414,6 +616,9 @@ public class Ventana extends JFrame {
 
         this.getTxtNombre().setText("");
         this.getTxtGastronomia().setText("");
+        this.getTxtDescripcion().setText("");
+        this.getTxtCategoria().setText("");
+        this.getTxtUrlImage().setText("");
 
     }
 }

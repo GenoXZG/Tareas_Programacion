@@ -43,15 +43,18 @@ public class MouseController extends MouseAdapter {
                 Postre nuevoPostre = new Postre();
                 nuevoPostre.setNombre(this.view.getTxtNombre().getText());
                 nuevoPostre.setGastronomia(this.view.getTxtGastronomia().getText());
-                if (modelo.agregarLibro(nuevoPostre)) {
+                nuevoPostre.setDescripcion(this.view.getTxtDescripcion().getText());
+                nuevoPostre.setCategoria(this.view.getTxtCategoria().getText());
+                nuevoPostre.setUrlImage(this.view.getTxtUrlImage().getText());
+                if (modelo.agregarPostre(nuevoPostre)) {
                     JOptionPane.showMessageDialog(view, "Se agrego correctamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(view, "No se pudo agregar", "Aviso", JOptionPane.ERROR_MESSAGE);
                 }
                 modelo.cargarDatos();
                 this.view.getTblPostres().setModel(modelo);
-                this.view.limpiarTexto();
                 this.view.getTblPostres().updateUI();
+                this.view.limpiarTexto();
             }
         }
 
@@ -62,6 +65,9 @@ public class MouseController extends MouseAdapter {
             actualizacion.setId(Integer.parseInt(this.view.getTxtidActualizar().getText()));
             actualizacion.setNombre(this.view.getTxtNombreActualizar().getText());
             actualizacion.setGastronomia(this.view.getTxtGastronomiaActualizar().getText());
+            actualizacion.setDescripcion(this.view.getTxtDescripcionActualizar().getText());
+            actualizacion.setCategoria(this.view.getTxtTipoActualizar().getText());
+            actualizacion.setUrlImage(this.view.getTxtUrlImage().getText());
             if (modelo.actualizarRegistro(actualizacion)){
                 JOptionPane.showMessageDialog(view, "El registro se actualizo correctamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
             }else {
@@ -91,10 +97,17 @@ public class MouseController extends MouseAdapter {
                 this.view.getTxtidEliminar().setText("0");
                 this.view.getTxtNombreEliminar().setText("");
                 this.view.getTxtGastronomiaEliminar().setText("");
+                this.view.getTxtDescripcionEliminar().setText("");
+                this.view.getTxtTipoEliminar().setText("");
+                this.view.getTxtUrlImageEliminar().setText("");
 
                 this.view.getTxtidActualizar().setText("0");
                 this.view.getTxtNombreActualizar().setText("");
                 this.view.getTxtGastronomiaActualizar().setText("");
+                this.view.getTxtDescripcionActualizar().setText("");
+                this.view.getTxtTipoActualizar().setText("");
+                this.view.getTxtUrlImageActualizar().setText("");
+
 
                 this.view.getTblPostres().setModel(modelo);
                 this.view.getTblPostres().updateUI();

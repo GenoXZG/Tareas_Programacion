@@ -5,13 +5,22 @@ public class Postre {
     private String nombre;
     private String gastronomia;
 
+    private String descripcion;
+
+    private String categoria;
+
+    private String urlImage;
+
     public Postre() {
     }
 
-    public Postre(int id, String nombre, String gastronomia) {
+    public Postre(int id, String nombre, String gastronomia, String descripcion, String categoria, String urlImage) {
         this.id = id;
         this.nombre = nombre;
         this.gastronomia = gastronomia;
+        this.descripcion = descripcion;
+        this.categoria = categoria;
+        this.urlImage = urlImage;
     }
 
     public int getId() {
@@ -36,6 +45,31 @@ public class Postre {
 
     public void setGastronomia(String gastronomia) {
         this.gastronomia = gastronomia;
+
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 
     @Override
@@ -44,6 +78,9 @@ public class Postre {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", gastronomia='" + gastronomia + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", urlImage='" + urlImage + '\'' +
                 '}';
     }
 }
